@@ -1,0 +1,156 @@
+.logs {
+  padding: 1rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h2 {
+    color: #1f2937;
+    font-size: 1.5rem;
+  }
+}
+
+.toggle {
+  display: flex;
+  background: #f3f4f6;
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
+.toggleButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.active {
+    background: white;
+    color: #3b82f6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover:not(.active) {
+    color: #374151;
+  }
+}
+
+.logsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logEntry {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.timestamp {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-family: monospace;
+}
+
+.statusCode {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: monospace;
+
+  &.success {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  &.error {
+    background: #fef2f2;
+    color: #dc2626;
+  }
+}
+
+.errorType {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.logContent {
+  color: #374151;
+}
+
+.apiDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.responseTime {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.errorMessage {
+  font-weight: 500;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.additionalData {
+  margin-top: 0.75rem;
+
+  summary {
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      color: #374151;
+    }
+  }
+
+  pre {
+    background: #f9fafb;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #374151;
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+  }
+}
+
+.loading, .noLogs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
